@@ -1,0 +1,27 @@
+{
+  "name": "desafio2_pokedex",
+  "version": "1.0.0",
+  "description": "Desafio 2 do modulo 2 da Blue",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "dev": "nodemon index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wsr2k2/Desafio2_PokeDex.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wsr2k2/Desafio2_PokeDex/issues"
+  },
+  "homepage": "https://github.com/wsr2k2/Desafio2_PokeDex#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.13"
+  },
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1"
+  }
+}

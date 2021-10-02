@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pr-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>Detalhes</title>
+  </head>
+  <body>
+    <header id="icon">
+      <img src="/img/icone.gif" width="100" alt="pokebola">
+      <p>Detalhes</p>
+    </header>
+    <nav>
+      <nav class="btn-index">
+        <a id="inicio" href="/">Inicio</a>
+        <a id="detalhes" href="detalhes">Detalhes</a>
+        <a id="cadastro" href="cadastro">Cadastrar</a>
+      </nav>
+      
+      <section>
+        <ul>
+          <li><strong>Id:</> <%= pokemon.id %></li>
+          <li><strong>Nome:</strong> <%= pokemon.nome %></li>
+          <li><strong>Tipo:</strong> <%= pokemon.tipo %></li>
+          <li>
+            <img src="<%= pokemon.imagem %>" alt="<%= pokemon.nome %>" />
+          </li>
+          <li><strong>Descrição:</strong> <%= pokemon.descricao %></li>
+          <li><strong>Altura:</strong> <%= pokemon.altura %> Metro(s)</li>
+          <li><strong>Peso:</strong> <%= pokemon.peso %> Kg</li>
+          <li><strong>Categoria:</strong> <%= pokemon.categoria %></li>
+          <li><strong>Habilidades:</strong> <%= pokemon.habilidade %></li>
+        </ul>
+      </section>
+  </body>
+</html>

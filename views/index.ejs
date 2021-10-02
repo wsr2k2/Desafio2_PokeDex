@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pr-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>Pokedex</title>
+  </head>
+  <body>
+    <header id="icon">
+      <img src="/img/icone.gif" width="100" alt="pokebola">
+    </header>
+    <nav class="btn-index">
+      <a id="inicio" href="/">Inicio</a>
+      <a id="detalhes" href="detalhes">Detalhes</a>
+      <a id="cadastro" href="cadastro">Cadastrar</a>
+    </nav>
+    
+    <section class="pokemons">
+      <% pokedex.forEach(item => { %>
+          <ul>
+              <li>Nome: <%= item.nome %></li>
+              <li><img src="/img/<%= item.imagem %>" alt= "pokemon"></li>
+              <li>Tipo: <%= item.tipo %></li>
+          </ul>
+        <% }) %>
+    </section>
+
+    <footer>
+      <p></p>
+    </footer>
+    <script src="/js/script.js"></script>
+  </body>
+</html>
