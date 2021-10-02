@@ -16,5 +16,8 @@ body{
 }
 
 #icon{
-  
+  background-color: rgb(247, 247, 247);
+  display: flex;
+  justify-content: center;
+  gap: 90px;
 }

@@ -5,26 +5,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/css/style.css" />
+    <link rel="icon" type="imagem/img" href="/img/aba.png" />
     <title>Pokedex</title>
   </head>
   <body>
     <header id="icon">
-      <img src="/img/icone.gif" width="100" alt="pokebola">
+      <img src="/img/icone.gif" width="150" alt="pokebola">
+      <img src="/img/pokedex.webp" width="300" alt="pokebola">
+      <img src="/img/icone.gif" width="150" alt="pokebola">
     </header>
     <nav class="btn-index">
       <a id="inicio" href="/">Inicio</a>
-      <a id="detalhes" href="detalhes">Detalhes</a>
       <a id="cadastro" href="cadastro">Cadastrar</a>
     </nav>
     
     <section class="pokemons">
-      <% pokedex.forEach(item => { %>
-          <ul>
-              <li>Nome: <%= item.nome %></li>
-              <li><img src="/img/<%= item.imagem %>" alt= "pokemon"></li>
-              <li>Tipo: <%= item.tipo %></li>
-          </ul>
-        <% }) %>
+      
+      <ul>
+        <% pokedex.forEach((item, id)=> { %>
+          <div><a href="/detalhes/<%=id%>"><img src=<%=item.imagem %> ></a>
+          </div>
+          <div>
+            Name: <%= item.nome %>
+          </div>
+          <div>
+            <br>Type: <%= item.tipo %>
+          </div>
+          <% }) %>
+      </ul>
+        
     </section>
 
     <footer>
