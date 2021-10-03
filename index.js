@@ -45,8 +45,7 @@ let pokedex = [
 let message = "";
 
 app.get("/", (req, res) => {
-  res.render("index", { titulo: "POKEDEX", pokedex: pokedex, message });
-  
+  res.render("index", { titulo: "POKEDEX", pokedex: pokedex, message });  
 });
 
 app.get("/detalhes/:id", (req, res) => {
@@ -77,10 +76,7 @@ app.post("/new", (req, res) => {
   setTimeout(() => {
     message = ""
 }, 5000);
-
 res.redirect("/");
-
-
 })
 
 app.listen(port, () =>

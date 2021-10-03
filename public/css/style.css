@@ -21,8 +21,7 @@ a{
     transition: 0.1s;
 }
 
-#pokedexid:hover, #cadastroid:hover{
-  
+#pokedexid:hover, #cadastroid:hover{  
   transform: scale(1.1);
 }
 
@@ -108,8 +107,7 @@ section {
 } 
 
 input{
-    border-radius: 10px;
-    
+    border-radius: 10px;    
 }
 
 #detalhes1{
