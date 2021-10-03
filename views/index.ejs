@@ -8,37 +8,55 @@
     <link rel="icon" type="imagem/img" href="/img/aba.png" />
     <title>Pokedex</title>
   </head>
-  <body>
+  <body id="fundo">
     <header id="icon">
       <a id="pokedex" href="/"><strong>POKEDEX</strong></a>
       <img src="/img/icone.gif" width="150" alt="pokebola">
       <img src="/img/pokedex.webp" width="300" alt="pokebola">
       <img src="/img/icone.gif" width="150" alt="pokebola">
-      <a id="cadastro" href="/cadastro"><strong>CADASTRAR</strong></a>
+      <a id="cadastro" href="/new"><strong>CADASTRAR</strong></a>
       
     </header>
-    <nav class="btn-index">
-      
-     
-      
-    </nav>
     
-    <section class="pokemons">
-      
-      <ul id="details">
-        <% pokedex.forEach((item, id)=> { %>
-          <div><a href="/detalhes/<%=id%>"><img src=<%=item.imagem %> ></a>
-          </div>
-          <div>
+    <% if(message != ""){ %>
+      <section id="message">
+          <p class="sucesso">Pokemon cadastrado com sucesso!</p>      <span id="close">&times;</span>
+      </section>
+      <% } %>
+    
+  <section class="pokemons">
+    <% pokedex.forEach((item, id) => { %>
+    <ul>
+      <li><strong>Nome: </strong><%= item.nome %></li>      
+      <li>
+        <a href="/detalhes/<%=id%>">
+          <img src="<%= item.imagem %>" alt="<%= item.nome %>" />
+        </a>
+      </li>
+      <li><strong>Tipo:</strong> <%= item.tipo %></li>
+    </ul>
+    <% }) %>
+    
+  </section>
+
+
+
+    <!-- <section class="pokemons">
+      <% pokedex.forEach((item, id)=> { %>
+      <ul>        
+          <li id="container"><a href="/detalhes/<%=id%>"><img src=<%=item.imagem %>></a>
+          </li>
+          <li>
             Name: <%= item.nome %>
-          </div>
-          <div>
+          </li>
+          <li>
             <br>Type: <%= item.tipo %>
-          </div>
-          <% }) %>
+          </li>
+          
       </ul>
+      <% }) %>
         
-    </section>
+    </section> -->
 
     <footer>
       <p></p>

@@ -13,8 +13,6 @@ a{
     color:black;
     text-decoration: none;
 }
-
-
 #pokedex, #cadastro{
     color: red;
     align-items: center;
@@ -23,8 +21,79 @@ a{
     margin-right: 40px;
     font-size: 25px; 
 }
-#details{
+
+section#message {
+    padding: 1.5rem;
+    background-color: orange;
+    color: red;
+    position: fixed;
+    top: 3rem;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 600;
+  
     display: flex;
-    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  span#close {
+    font-size: 2rem;
+    cursor: pointer;
+    transition: .3s;
+  }
+  
+  span#close:hover{
+    color: rgb(255, 0, 0);
+    transform: scale(1.5);
+  }
+ 
+input#section {
+    display: none;
+}
+
+body {
+    background-color: rgb(224, 224, 250);
+    font-size: 17px;
+    font-family: 'Poppins', sans-serif;
+}
+
+section {
+    margin: 0;
+}
+
+.pokemons{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     flex-wrap: wrap;
+}
+
+.pokemons ul li {
+    padding: 5px;
+}
+
+.pokemons ul {
+    background-color: white;
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.4);
+    list-style: none;
+    margin: 10px;
+    margin-top: 40px;
+    padding: 30px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.pokemons ul li {
+    padding: 5px;
+}
+
+.pokemons ul li img{
+    height: 200px;
+    width: 200px;
 }

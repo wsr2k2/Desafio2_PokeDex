@@ -6,7 +6,6 @@ app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname, "public")));
 app.use(express.urlencoded());
 
-
 let pokedex = [
   {
     numero: 01,
@@ -43,20 +42,20 @@ let pokedex = [
   },
 ];
 
-// let message = "";
-
+let message = "";
 
 app.get("/", (req, res) => {
-  res.render("index", { titulo: "POKEDEX", pokedex: pokedex });  
+  res.render("index", { titulo: "POKEDEX", pokedex: pokedex, message });
+  
 });
 
 app.get("/detalhes/:id", (req, res) => {
   const id = req.params.id
-  const pokemon = pokedex[id]
-  res.render("detalhes.ejs", { pokemon })
+  const nada = pokedex[id]
+  res.render("detalhes.ejs", { nada })
 });
 
-app.get("/cadastro", (req, res) => {
+app.get("/new", (req, res) => {
   res.render("cadastro.ejs")
 })
 
@@ -73,28 +72,15 @@ app.post("/new", (req, res) => {
     habilidade: habilidade
   }
   pokedex.push(novoPokemon);
-  res.redirect("/");
+  message = "Parabéns, seu Pokemon foi cadastrado com sucesso!!!"
+  setTimeout(() => {
+    message = ""
+}, 5000);
+
+res.redirect("/");
+
 
 })
-
-// app.get("/cadastro", (req, res) => {
-//   res.render("cadastro.ejs");
-// })
-
-// app.get("/detalhes", (req, res) => {  
-//   res.render("detalhes");
-// });
-
-
-// app.get("/cadastro", (req, res) => {  
-//   res.render("cadastro");
-// });
-
-// app.post("/cadastro", (req, res) => {
-//   const pokemon = req.body;
-//   pokedex.push(pokemon);
-//   res.redirect("/");
-// });
 
 app.listen(port, () =>
   console.log(`Servidor rodando em http://localhost:${port}`)
