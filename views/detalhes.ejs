@@ -10,27 +10,28 @@
   </head>
   <body>
     <header id="icon">
+      <a id="pokedex" href="/"><strong>POKEDEX</strong></a>
       <img src="/img/icone3.gif" width="150" alt="pokebola">
       <img src="/img/pokedex.webp" width="300" alt="pokebola">
       <img src="/img/icone3.gif" width="150" alt="pokebola">
+      <a id="cadastro" href="/cadastro"><strong>CADASTRAR</strong></a>
     </header>
-    <nav>
-      <nav class="btn-index">
-        <a id="inicio" href="/">Inicio</a>
-        <a id="cadastro" href="cadastro">Cadastrar</a>
-      </nav>
-      
+      <section>
+        <h1>DETALHES DO POKEMON</h1>
+        <p>Detalhes do Pokemon escolhido:</p>
+      </section> 
       <section>
         <ul>
           <div>
             <img src="<%= pokemon.imagem %>" alt="<%= pokemon.nome %>" />
-          </div>
+          </div id="detalhesPokemon">
           <li><strong>Descrição:</strong> <%= pokemon.descricao %></li>
-          <li><strong>Altura:</strong> <%= pokemon.altura %> Metro(s)</li>
+          <li><strong>Altura:</strong> <%= pokemon.altura %> M</li>
           <li><strong>Peso:</strong> <%= pokemon.peso %> Kg</li>
           <li><strong>Categoria:</strong> <%= pokemon.categoria %></li>
           <li><strong>Habilidades:</strong> <%= pokemon.habilidade %></li>
         </ul>
       </section>
+      <script src="/js/script.js"></script>
   </body>
 </html>

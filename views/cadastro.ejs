@@ -8,17 +8,19 @@
     <link rel="icon" type="imagem/img" href="/img/aba.png" />
     <title>Cadastro</title>
   </head>
-
   <body>
     <header id="icon">
+      <a id="pokedex" href="/"><strong>POKEDEX</strong></a>
       <img src="/img/icone2.gif" width="150" alt="pokebola">
       <img src="/img/pokedex.webp" width="300" alt="pokebola">
       <img src="/img/icone2.gif" width="150" alt="pokebola">
-    </header>
-    <nav class="btn-index">
-      <a id="inicio" href="/">Inicio</a>
-      <a id="cadastro" href="cadastro">Cadastrar</a>
-    </nav>
+      <a id="pokedex" href="/"><strong>POKEDEX</strong></a>      
+    </header>   
+    <section>
+      <h1>CADSTRO DE POKEMONS</h1>
+      <p>Cadastre seu pokemon logo abaixo:</p>
+    </section>    
+    
   <sectio>
     <form action="/new" method="POST">
       <div>
@@ -43,11 +45,11 @@
       </div>
       <div>
         <label for="altura">Altura:</label>
-        <input type="number" name="altura" id="altura" placeholder="Altura do Pokemon" required>
+        <input type="float.number" name="altura" id="altura" placeholder="Altura do Pokemon" required>
       </div>
       <div>
         <label for="peso">Peso:</label>
-        <input type="number" name="peso" id="peso" placeholder="Peso do Pokemon" required>
+        <input type="float.number" name="peso" id="peso" placeholder="Peso do Pokemon" required>
       </div>
       <div>
         <label for="categoria">Categoria:</label>

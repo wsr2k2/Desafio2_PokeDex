@@ -1,23 +1,30 @@
-#home{
-    color: red;
-    text-decoration: none;
-}
-#detalhes{
-    color: red;
-    text-decoration: none;
-}
-
-#head-index{
-    background-image: aqua;
-}
-
 body{
-    background-color: rgb(238, 238, 131);
+    background-color: rgb(149, 149, 247)
 }
 
 #icon{
   background-color: rgb(247, 247, 247);
   display: flex;
-  justify-content: center;
-  gap: 90px;
+  justify-content: space-between; 
+  border: 5px solid rgb(149, 51, 240);
+}
+
+a{
+    color:black;
+    text-decoration: none;
+}
+
+
+#pokedex, #cadastro{
+    color: red;
+    align-items: center;
+    margin-top: 45px;
+    margin-left: 45px;
+    margin-right: 40px;
+    font-size: 25px; 
+}
+#details{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
