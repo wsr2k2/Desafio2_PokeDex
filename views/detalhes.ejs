@@ -14,22 +14,22 @@
       <img src="/img/icone3.gif" width="150" alt="pokebola">
       <img src="/img/pokedex.webp" width="300" alt="pokebola">
       <img src="/img/icone3.gif" width="150" alt="pokebola">
-      <a id="cadastro" href="/cadastro"><strong>CADASTRAR</strong></a>
+      <a id="cadastro" href="/new"><strong>CADASTRAR</strong></a>
+      
     </header>
       <section>
-        <h1>DETALHES DO POKEMON</h1>
-        <p>Detalhes do Pokemon escolhido:</p>
+        <h1 id="detalhes2">DETALHES DO POKEMON</h1>
       </section> 
-      <section>
+      <section id="detalhes1">
         <ul>
           <div>
-            <img src="<%= nada.imagem %>" alt="<%= nada.nome %>" />
+            <img src="<%= nada.imagem %>" alt="<%= nada.nome %>" width="200"/>
           </div id="detalhesPokemon">
-          <li><strong>Descrição:</strong> <%= nada.descricao %></li>
-          <li><strong>Altura:</strong> <%= nada.altura %> M</li>
-          <li><strong>Peso:</strong> <%= nada.peso %> Kg</li>
-          <li><strong>Categoria:</strong> <%= nada.categoria %></li>
-          <li><strong>Habilidades:</strong> <%= nada.habilidade %></li>
+          <div><strong>Descrição:</strong> <%= nada.descricao %></div>
+          <div><strong>Altura:</strong> <%= nada.altura %> M</div>
+          <div><strong>Peso:</strong> <%= nada.peso %> Kg</div>
+          <div><strong>Categoria:</strong> <%= nada.categoria %></div>
+          <div><strong>Habilidades:</strong> <%= nada.habilidade %></div>
         </ul>
       </section>
       <script src="/js/script.js"></script>
