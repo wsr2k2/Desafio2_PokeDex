@@ -8,7 +8,7 @@ app.use(express.urlencoded());
 
 let pokedex = [
   {
-    numero: 01,
+    id: 009,
     nome: "Blastoise",
     tipo: "Water",
     imagem: "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/009.png",
@@ -19,7 +19,7 @@ let pokedex = [
     habilidade: "Torrent"
   },
   {
-    numero: 02,
+    id: 093,
     nome: "Haunter",
     tipo: "Ghost, Poison",
     imagem: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/093.png",
@@ -30,7 +30,7 @@ let pokedex = [
     habilidade: "Levitate"
   },
   {
-    numero: 03,
+    id: 054,
     nome: "Psyduck",
     tipo: "Water",
     imagem: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/054.png",
@@ -51,8 +51,8 @@ app.get("/", (req, res) => {
 
 app.get("/detalhes/:id", (req, res) => {
   const id = req.params.id
-  const nada = pokedex[id]
-  res.render("detalhes.ejs", { nada })
+  const pokemon = pokedex[id]
+  res.render("detalhes.ejs", { pokemon })
 });
 
 app.get("/new", (req, res) => {
@@ -60,8 +60,9 @@ app.get("/new", (req, res) => {
 })
 
 app.post("/new", (req, res) => {
-  const {nome, tipo, imagem, descricao, altura, peso, categoria, habilidade} = req.body;
+  const {id, nome, tipo, imagem, descricao, altura, peso, categoria, habilidade} = req.body;
   const novoPokemon = {
+    id: id,
     nome: nome,
     tipo: tipo,
     imagem: imagem,

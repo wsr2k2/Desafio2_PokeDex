@@ -10,11 +10,11 @@
   </head>
   <body id="fundo">
     <header id="icon">
-      <a id="pokedex" href="/"><strong>POKEDEX</strong></a>
+      <a id="pokedexid" href="/"><strong>POKEDEX</strong></a>
       <img src="/img/icone.gif" width="150" alt="pokebola">
       <img src="/img/pokedex.webp" width="300" alt="pokebola">
       <img src="/img/icone.gif" width="150" alt="pokebola">
-      <a id="cadastro" href="/new"><strong>CADASTRAR</strong></a>
+      <a id="cadastroid" href="/new"><strong>CADASTRAR</strong></a>
       
     </header>
     
@@ -27,10 +27,10 @@
   <section class="pokemons">
     <% pokedex.forEach((item, id) => { %>
     <ul>
-      <li><strong>Nome: </strong><%= item.nome %></li>      
       <li>
         <a href="/detalhes/<%=id%>">
           <img src="<%= item.imagem %>" alt="<%= item.nome %>"/>
+          <li><strong>Nome: </strong><%= item.nome %></li>      
         </a>
       </li>
       <li><strong>Tipo:</strong> <%= item.tipo %></li>

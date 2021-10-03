@@ -11,13 +11,19 @@ a{
     text-decoration: none;
   
 }
-#pokedex, #cadastro{
+#pokedexid, #cadastroid{
     color: blue;
     align-items: center;
     margin-top: 45px;
     margin-left: 45px;
     margin-right: 40px;
-    font-size: 25px; 
+    font-size: 25px;
+    transition: 0.1s;
+}
+
+#pokedexid:hover, #cadastroid:hover{
+  
+  transform: scale(1.1);
 }
 
 section#message {
@@ -85,8 +91,13 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    transition: 0.1s;
 }
-
+.pokemons ul:hover {
+  background-color: rgb(68, 127, 255); 
+  transform: scale(1.1);
+  
+}
 .pokemons ul li {
     padding: 5px;
 }
@@ -94,7 +105,7 @@ section {
 .pokemons ul li img{
     height: 200px;
     width: 200px;
-}
+} 
 
 input{
     border-radius: 10px;
@@ -113,6 +124,11 @@ input{
 #detalhes2, #cadastro1, #cadastro2{
     text-align: center;
     color:rgba(0, 0, 0, 0.4)
+}
+#detalhes3{
+  color: white;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  text-align: center;
 }
 
 #form{
